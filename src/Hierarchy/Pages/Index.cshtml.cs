@@ -24,8 +24,8 @@ namespace SO88822195.Module.Hierarchy.Pages
         {
             if (!string.IsNullOrEmpty(id))
             {
-                Guid selectedDepartmentId;
-                bool isValidId = Guid.TryParse(id, out selectedDepartmentId);
+                Id = id;
+                bool isValidId = Guid.TryParse(id, out Guid selectedDepartmentId);
                 if (isValidId)
                 {
                     Department? selectedDepartment = await _departmentService.GetDepartmentById(selectedDepartmentId);
