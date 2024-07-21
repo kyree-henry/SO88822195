@@ -5,6 +5,79 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h4 class="fw-bolder">Reminder Module</h4>
+    <p class="font-monospace">
+        This module is to set reminders that trigger email notifications.
+    </p>
+
+    <div class="container mt-4">
+        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#addReminderModal">Add Reminder</button>
+        <table class="table mt-3" >
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Date-Time</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="reminderTableBody">
+                @{
+                    if (Model.Data.Any())
+                    {
+                        @foreach (Reminder reminder in Model.Data)
+                        {
+                            string status = "Pending";
+                            if (reminder.DateTime <= DateTime.Now)
+                            {
+                                status = "Completed";
+                            }
+                            string badgeClass = status == "Completed" ? "badge-success" : "badge-warning";
+                            <tr>
+                                <td>@reminder.Title</td>
+                                <td>@reminder.DateTime?.ToString("g")</td>
+                                <td><span class="badge @badgeClass">@status</span></td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="3">No record!</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="modal fade" id="addReminderModal" tabindex="-1" role="dialog" aria-labelledby="addReminderModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addReminderModalLabel">Add Reminder</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <formhelper method="post" asp-resetFormAfterSuccess="true" asp-enableButtonAfterSuccess="true">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input asp-for="Input.Title" class="form-control" required />
+                            <span asp-validation-for="Input.Title" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="dateTime">Date and Time</label>
+                            <input type="datetime-local" class="form-control" asp-for="Input.DateTime" required>
+                            <span asp-validation-for="Input.DateTime" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save Reminder</button>
+                    </div>
+                </formhelper>
+            </div>
+        </div>
+    </div>
 </div>

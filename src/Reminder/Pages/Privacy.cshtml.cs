@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Reminder.Pages;
+namespace SO88822195.Module.SchedulEmail.Pages;
 
 public class PrivacyModel : PageModel
 {

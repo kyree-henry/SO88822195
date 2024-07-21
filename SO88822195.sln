@@ -5,9 +5,9 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Module", "Module", "{259F9A00-9223-4DF3-8F47-71F981708F9E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reminder", "src\Reminder\Reminder.csproj", "{4DE912AB-1B90-4F76-8FE0-936718582FA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchedulEmail", "src\Reminder\SchedulEmail.csproj", "{4DE912AB-1B90-4F76-8FE0-936718582FA9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hierarchy", "src\Department\Hierarchy.csproj", "{D89D8F9A-77BB-40DF-9BB2-B1CC0FB9E745}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hierarchy", "src\Hierarchy\Hierarchy.csproj", "{37EDD52F-8B2D-412F-99F8-BE6492BA2073}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,17 +19,17 @@ Global
 		{4DE912AB-1B90-4F76-8FE0-936718582FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DE912AB-1B90-4F76-8FE0-936718582FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DE912AB-1B90-4F76-8FE0-936718582FA9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D89D8F9A-77BB-40DF-9BB2-B1CC0FB9E745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D89D8F9A-77BB-40DF-9BB2-B1CC0FB9E745}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D89D8F9A-77BB-40DF-9BB2-B1CC0FB9E745}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D89D8F9A-77BB-40DF-9BB2-B1CC0FB9E745}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37EDD52F-8B2D-412F-99F8-BE6492BA2073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37EDD52F-8B2D-412F-99F8-BE6492BA2073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37EDD52F-8B2D-412F-99F8-BE6492BA2073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37EDD52F-8B2D-412F-99F8-BE6492BA2073}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4DE912AB-1B90-4F76-8FE0-936718582FA9} = {259F9A00-9223-4DF3-8F47-71F981708F9E}
-		{D89D8F9A-77BB-40DF-9BB2-B1CC0FB9E745} = {259F9A00-9223-4DF3-8F47-71F981708F9E}
+		{37EDD52F-8B2D-412F-99F8-BE6492BA2073} = {259F9A00-9223-4DF3-8F47-71F981708F9E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AA7CF477-944E-40D0-BE7E-874CE52FEB55}
